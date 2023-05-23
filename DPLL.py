@@ -175,5 +175,5 @@ class SatSolver:
             return None
         for literal in self.literal_values:
             if literal not in assignment:
-                assignment[literal] = False
+                assignment[literal] = random.choice(True, False)
         return assignment
