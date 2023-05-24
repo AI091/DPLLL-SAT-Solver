@@ -1,7 +1,5 @@
-import sys
 from typing import List, Tuple
 from copy import deepcopy
-from itertools import combinations
 import random
 
 
@@ -177,3 +175,9 @@ class SatSolver:
             if literal not in assignment:
                 assignment[literal] = random.choice(True, False)
         return assignment
+
+
+if __name__ == "__main__":
+    solver = SatSolver()
+    solver.read_input()
+    print(solver.solve(solver.clauses))

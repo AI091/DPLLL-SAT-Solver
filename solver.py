@@ -1,9 +1,6 @@
 from DPLL import *
-import sys
 from typing import List, Tuple
-from copy import deepcopy
 from itertools import combinations
-import random
 
 NUM_DIGITS = 5
 
@@ -25,6 +22,7 @@ class NumberMindSolver:
             ("39458", 2),
             ("34109", 1),
             ("51545", 2),
+            ("12531", 1),
         ]
         self.clauses = []
 
@@ -77,6 +75,6 @@ class NumberMindSolver:
                 ans[int(key[0])] = key[1]
         return "".join(ans)
 
-
-solver = NumberMindSolver()
-print(solver.solve())
+if __name__ == "__main__":
+    solver = NumberMindSolver()
+    print(solver.solve())
